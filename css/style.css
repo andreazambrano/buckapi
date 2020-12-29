@@ -2458,7 +2458,7 @@ input.round-btn {
   height: 227px;
   display: table;
   width: 100%;
-  background: url("../images/pricing/pricing_icon_bg.png");
+  /*background: url("../images/pricing/pricing_icon_bg.png");*/
   background-position: left;
   background-repeat: no-repeat;
 }
