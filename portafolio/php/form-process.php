@@ -1,0 +1,1 @@
+Design Type is required Message is required 

@@ -1,0 +1,23 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /niwax-demos/html/js</title>
+ </head>
+ <body>
+<h1>Index of /niwax-demos/html/js</h1>
+  <table>
+   <tr><th valign="top">&nbsp;</th><th><a href="?C=N;O=A">Name</a></th><th><a href="?C=M;O=A">Last modified</a></th><th><a href="?C=S;O=D">Size</a></th><th><a href="?C=D;O=A">Description</a></th></tr>
+   <tr><th colspan="5"><hr></th></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="/niwax-demos/html/">Parent Directory</a>       </td><td>&nbsp;</td><td align="right">  - </td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="vendor/">vendor/</a>                </td><td align="right">2021-03-31 03:42  </td><td align="right">  - </td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="preloader.js">preloader.js</a>           </td><td align="right">2021-01-29 18:17  </td><td align="right">233 </td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="form.js">form.js</a>                </td><td align="right">2021-01-29 18:19  </td><td align="right">1.1K</td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="form.min.js">form.min.js</a>            </td><td align="right">2021-01-29 18:18  </td><td align="right">1.1K</td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="main.js">main.js</a>                </td><td align="right">2021-01-29 18:16  </td><td align="right">3.6K</td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="validator.min.js">validator.min.js</a>       </td><td align="right">2021-01-26 21:14  </td><td align="right">5.8K</td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="bootstrap.bundle.min.js">bootstrap.bundle.min.js</a></td><td align="right">2021-01-26 21:13  </td><td align="right"> 82K</td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="jquery.min.js">jquery.min.js</a>          </td><td align="right">2021-01-26 21:16  </td><td align="right"> 85K</td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="plugin.min.js">plugin.min.js</a>          </td><td align="right">2021-01-29 18:14  </td><td align="right">173K</td><td>&nbsp;</td></tr>
+   <tr><th colspan="5"><hr></th></tr>
+</table>
+</body></html>
