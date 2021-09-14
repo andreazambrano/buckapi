@@ -185,7 +185,7 @@
                        <ul class="navbar-nav">
                      
                      <!-- End Dropdown -->
-                     <li class="nav-item"><a class="nav-link" href="portafolio/portfolio.html">Portafolio</a></li>
+                     <li class="nav-item"><a class="nav-link" href="portafolio.html">Portafolio</a></li>
                      <!-- End Dropdown -->
                      <li class="nav-item dropdown">
                         <a class="nav-link" style="cursor: pointer;" data-toggle="dropdown">
@@ -235,26 +235,6 @@
    <!-- End of Header area=-->
 
 
-   <!-- Contact End -->
-    <!--about-->
-  <!--  <section id="tw-intro" class="tw-intro-area" style="top:125px;">
-      <div class="container">
-         <div class="row">
-            <div class="col-lg-6 col-md-12 text-lg-right text-md-center wow fadeInLeft" data-wow-duration="1s" style="visibility: visible; animation-duration: 1s; animation-name: fadeInLeft;">
-               <img src="images/about/about_image.png" alt="" class="img-fluid">
-            </div>
-            <div class="col-lg-5 ml-auto col-md-12 wow fadeInRight" data-wow-duration="1s" style="visibility: visible; animation-duration: 1s; animation-name: fadeInRight;">
-               <h2 class="column-title">Sobre nosotros</h2>
-               <span class="animate-border tw-mb-40"></span>
-               <p align="justify">
-                  Somos un equipo creativo dedicado al diseño y desarrollo web, queremos orientarle para que su empresa evolucione y obtenga acceso a grandes mercados.<br> Contamos con profesionales capaces de crear para usted el sitio web atractivo, intutito, funcional y responsivo, que tanto estaba búscando.
-                  <br>Implementamos soluciones óptimas adaptadas a sus necesidades. "Solo imagine y nosotros lo hacemos realidad"
-               </p>
-            </div>
-         </div>
-      </div>
-   </section> -->
-   <!-- End Features section -->
 
    <section id="tw-contact-us" class="tw-contact-us bg-offwhite" style="top:90px;">
       <div class="container">
@@ -291,7 +271,7 @@
          <div class="col-md-8">
          <div class="contact-us-form">
          
-               <form id="contactFormInfo" class="contact-form" method="GET">
+               <form id="contactFormInfo" class="contact-form"  action="https://email.buckapi.com:3029/ejemplo">
                
                <div class="error-container"></div>
                <div class="row">
@@ -303,7 +283,7 @@
                   <!-- Col end -->
                   <div class="col-lg-6">
                      <div class="form-group">
-                        <input class="form-control form-subject" placeholder="Asunto" name="subject" id="subject" type="text">
+                        <input class="form-control form-messageSubject" placeholder="Asunto" name="messageSubject" id="messageSubject" type="text">
                      </div>
                   </div>
                   <div class="col-lg-6">
@@ -318,9 +298,10 @@
                   </div>
                   <div class="col-lg-12">
                      <div class="form-group">
-                        <textarea class="form-control form-message required-field" id="message" placeholder="Descripción" rows="5"></textarea>
+                        <textarea class="form-control form-message required-field" id="message" name="message" placeholder="Descripción" rows="5"></textarea>
                      </div>
                   </div>
+                  
                   <!-- Col 12 end -->
                </div>
                <!-- Form row end -->
@@ -360,7 +341,7 @@
                <!-- End Footer info -->
                <div class="footer-awarad">
                   <img src="images/icon/best.png" alt="">
-                  <p>BUCKAPI 2016-2021</p>
+                  <p>BUCKAPI 2021</p>
                </div>
             </div>
             <!-- End Col -->
@@ -407,7 +388,7 @@
                            <span class="animate-border border-black"></span>
                         </div>
                         <ul>
-                           <li><a href="portafolio/portfolio.html">Portafolio</a></li>
+                           <li><a href="portafolio.html">Portafolio</a></li>
                         </ul>
                         
                      </div>
@@ -487,19 +468,50 @@
 
 </html>
 <script type="text/javascript">
-const url = "https://db.andesproadventures.com:3005/newBookAppToAdmin";
-fetch(url, {
-    method : "POST",
-    body: new FormData(document.getElementById("contactFormInfo")),
-    // -- or --
-    // body : JSON.stringify({
-        // user : document.getElementById('user').value,
-        // ...
-    // })
-}).then(
-    response => response.text() // .json(), etc.
-    // same as function(response) {return response.text();}
-).then(
-    html => console.log(html)
-);
+
+
+
+async function postFormDataAsJson({ url, formData }) {
+    const plainFormData = Object.fromEntries(formData.entries());
+    const formDataJsonString = JSON.stringify(plainFormData);
+
+    const fetchOptions = {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+        },
+        body: formDataJsonString,
+    };
+
+    const response = await fetch(url, fetchOptions);
+
+    if (!response.ok) {
+        const errorMessage = await response.text();
+        throw new Error(errorMessage);
+    }
+
+    return response.json();
+}
+
+
+async function handleFormSubmit(event) {
+    event.preventDefault();
+
+    const form = event.currentTarget;
+    const url = form.action;
+
+    try {
+        const formData = new FormData(form);
+        const responseData = await postFormDataAsJson({ url, formData });
+
+        console.log({ responseData });
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+const exampleForm = document.getElementById("contactFormInfo");
+exampleForm.addEventListener("submit", handleFormSubmit);
+
 </script>
