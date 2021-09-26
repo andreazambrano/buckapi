@@ -2593,7 +2593,7 @@ footer.ftshap:before {
     padding: 20px;
     color: #fff;
     cursor: pointer;
-    background: #5a4bc2;
+    background: #2196f3;
     -webkit-border-radius: 100px;
     border-radius: 40px 40px 40px 40px
 }
@@ -6253,10 +6253,10 @@ html .pb140 {
 }
 
 .bg-btn {
-    background: #ffbd84;
-    background: -moz-linear-gradient(left,#ffbd84 0,#ff1f8e 100%);
-    background: -webkit-linear-gradient(left,#ffbd84 0,#ff1f8e 100%);
-    background: linear-gradient(to right,#ffbd84 0,#ff1f8e 100%);
+    background: #1773ec;
+    background: -moz-linear-gradient(left,#1773ec 0,#1773ec 100%);
+    background: -webkit-linear-gradient(left,#1773ec 0,#1773ec 100%);
+    background: linear-gradient(to right,#1773ec 0,#1773ec 100%);
     -webkit-box-shadow: 0 10px 15px 0 rgba(175,0,87,.2);
     box-shadow: 0 10px 15px 0 rgba(175,0,87,.2)
 }
@@ -6271,10 +6271,10 @@ html .pb140 {
 }
 
 .bg-btn3 {
-    background: #673ab7;
-    background: -moz-linear-gradient(left,#673ab7 0,#2196f3 100%);
-    background: -webkit-linear-gradient(left,#673ab7 0,#2196f3 100%);
-    background: linear-gradient(to right,#673ab7 0,#2196f3 100%);
+    background: #01a65a;
+    background: -moz-linear-gradient(left,#01a65a 0,#01a65a 100%);
+    background: -webkit-linear-gradient(left,#01a65a 0,#01a65a 100%);
+    background: linear-gradient(to right,#01a65a 0,#01a65a 100%);
     -webkit-box-shadow: 0 10px 15px 0 rgba(56,0,189,.2);
     box-shadow: 0 10px 15px 0 rgba(56,0,189,.2)
 }
