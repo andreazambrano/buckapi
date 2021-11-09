@@ -1328,7 +1328,8 @@ li.dropdown:hover .tw-mega-menu {
 
 .tw-off-search {
   background: #2e2c2d;
-  width: 125px;
+  /*width: 125px;*/
+  width: 80px;
   height: 50px;
   color: #fff;
   border-radius: 25px;
